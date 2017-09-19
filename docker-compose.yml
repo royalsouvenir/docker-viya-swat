@@ -1,13 +1,14 @@
 version: '3'
 services:
-  client:
-    image: .
-    container_name: swatclient01
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./src:/src
-      - .config:/config
-
+        client:
+                build: .
+                container_name: swatclient01
+                ports:
+                        - "8000:8000"
+                volumes:
+                        - ./src:/src
+                        - .config:/config
+                expose:
+                        - "8000"
 volumes:
   swatclient01:
