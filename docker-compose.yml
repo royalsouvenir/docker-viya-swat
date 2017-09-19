@@ -1,0 +1,13 @@
+version: '3'
+services:
+  client:
+    image: .
+    container_name: swatclient01
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/src
+      - .config:/config
+
+volumes:
+  swatclient01:
